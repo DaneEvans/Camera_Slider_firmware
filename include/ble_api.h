@@ -44,6 +44,15 @@ extern "C" {
  */
 
 /**
+ * @defgroup ble_commands_slider Slider
+ * @{
+ *
+ * @brief Slider controls
+ *
+ * The slider is protected by limit switches.
+
+ */
+/**
  * @brief Move slider forward or backwards
  *
  * @details
@@ -84,6 +93,27 @@ extern "C" {
 #define SLIDE_SPEED "S:"
 
 /**
+ * @brief Homing - set origin
+ *
+ * @details
+ * - Command: "H "
+ * - Action: Sets absolute value to 0 at current point
+ * - Response: "Home. <value>"
+ *
+ * @note This command is planned for future implementation
+ */
+#define HOME "H "
+/** @} */  // end of ble_commands_slider
+
+/**
+ * @defgroup ble_commands_rotator Rotator
+ * @{
+ *
+ * @brief Rotator controls
+ *
+ * The Rotator is infinite.
+ */
+/**
  * @brief Move rotator cw or ccw 
  *
  * @details
@@ -117,7 +147,16 @@ extern "C" {
  * @note This command is planned for future implementation
  */
 #define ROTATE_SPEED "Rs:"
+/** @} */  // end of ble_commands_rotator
 
+/**
+ * @defgroup ble_commands_general General
+ * @{
+ *
+ * @brief General controls
+ *
+ * The slider is protected by limit switches.
+ */
 
 /**
  * @brief Get device status
@@ -145,6 +184,7 @@ extern "C" {
 
 
 
+/** @} */  // end of ble_commands_general
 
 
 /** @} */  // end of ble_commands
