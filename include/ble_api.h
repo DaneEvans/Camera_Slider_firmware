@@ -150,6 +150,53 @@ extern "C" {
 /** @} */  // end of ble_commands_rotator
 
 /**
+ * @defgroup ble_commands_camera Camera
+ * @{
+ *
+ * @brief Camera controls
+ *
+ * The camera uses optocouplers to prevent damage.
+ */
+
+/**
+ * @brief Focus
+ *
+ * @details
+ * - Command: 'F'
+ * - Action: Triggers camera autofocus
+ * - Response: "Focussing"
+ *
+ * @note This command is planned for future implementation
+ */
+#define FOCUS 'F:'
+
+/**
+ * @brief Shutter
+ *
+ * @details
+ * - Command: 's'
+ * - Action: Open shutter - auto exposure 
+ * - Response: "shutter open" confirmation
+ *
+ * @note This command is planned for future implementation
+ */
+#define SHUTTER 's'
+/**
+ * @brief Shutter Bulb
+ *
+ * @details
+ * - Command: 'S <uint ms>'
+ * - Action: Open shutter - bulb exposure 
+ * - Response: "shutter open - bulb <int> ms" confirmation
+ *
+ * @note This command is planned for future implementation
+ */
+#define SHUTTER_BULB 'S'
+
+
+/** @} */  // end of ble_commands_camera
+
+/**
  * @defgroup ble_commands_general General
  * @{
  *
@@ -181,8 +228,6 @@ extern "C" {
  * @note This command is planned for future implementation
  */
 #define STOP 'K'
-
-
 
 /** @} */  // end of ble_commands_general
 
